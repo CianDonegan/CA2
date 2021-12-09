@@ -37,3 +37,6 @@ def signinView(request):
 def signoutView(request):
     logout(request)
     return redirect('signin')
+
+def contactUs(request):
+    return render(request, 'contact.html', {})

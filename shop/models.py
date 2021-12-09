@@ -1,7 +1,6 @@
 import uuid
 from django.db import models
 from django.urls import reverse
-from django.utils.text import slugify
 
 class Category(models.Model):
     id = models.UUIDField(
@@ -38,7 +37,6 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, blank=True, null=True) 
-    slug = models.SlugField(null=True, unique=True)
 
 
     class Meta:
@@ -46,12 +44,8 @@ class Product(models.Model):
         verbose_name = 'product'
         verbose_name_plural = 'products'
         
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
-        super(Product, self).save(*args, **kwargs)
-
     def get_absolute_url(self):
-        return reverse('shop:prod_detail', args=[self.category.id, self.slug])
+        return reverse('shop:prod_detail', args=[self.category.id, self.id])
 
     def __str__(self):
         return self.name    

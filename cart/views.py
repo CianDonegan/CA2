@@ -115,7 +115,7 @@ def cart_detail(request, total=0, counter=0, cart_item = None):
                                          'description':description})
 
 def cart_remove(request, product_id):
-    cart = Cart.object.get(cart_id=_cart_id(request))
+    cart = Cart.objects.get(cart_id=_cart_id(request))
     product = get_object_or_404(Product, id=product_id)
     cart_item = CartItem.objects.get(product=product, cart=cart)
     if cart_item.quantity > 1:
@@ -126,8 +126,8 @@ def cart_remove(request, product_id):
     return redirect('cart:cart_detail')
 
 def full_remove(request, product_id):
-    cart = Cart.objects.get(cart_id=cart_id(request))
-    product = get_object_or_404(Product, id-product_id)
+    cart = Cart.objects.get(cart_id=_cart_id(request))
+    product = get_object_or_404(Product, id=product_id)
     cart_item = CartItem.objects.get(product=Product, cart=cart)
     cart_item.delete()
-    return redirecct('cart:cart_detail')
+    return redirect('cart:cart_detail')
