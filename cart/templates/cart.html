@@ -4,7 +4,7 @@
 	This is the shopping cart page. Proceed to review your items and place the order.
 {% endblock %}
 {% block title %}
-	Cart - Perfect Cushion Store
+	Cart - The Furniture Shop
 {% endblock %}
 {% block content %}
 	{% if not cart_items %}
@@ -103,9 +103,9 @@
 					<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 					data-key="{{ data_key }}"
 					data-amount="{{ stripe_total }}"
-					data-name="Perfect Cushion Shop"
+					data-name="The Furniture Shop"
 					data-description="{{ description }}"
-					data-image="{% static 'images/logo.png' %}"
+					data-image="{% static 'images/logo.jpg' %}"
 					data-locale="auto"
 					data-currency="eur"
 					data-shipping-address="true"
