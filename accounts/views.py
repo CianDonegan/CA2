@@ -40,3 +40,6 @@ def signoutView(request):
 
 def contactUs(request):
     return render(request, 'contact.html', {})
+
+def aboutUs(request):
+    return render(request, 'aboutus.html', {})

@@ -1,0 +1,80 @@
+
+.section1{
+    width:100%;
+    min-height: 100hv;
+    background-color: #ddd;
+}
+
+.container2{
+    width: 80%;
+    display: block;
+    margin:auto;
+    padding-top:100px;
+}
+
+.content-section {
+    width: 55%;
+}
+
+.image-section1 {
+    float: right;
+    width: 40%;
+}
+
+.image-section1 img {
+    background-image: url(https://media.istockphoto.com/photos/about-us-word-on-a-red-wooden-block-picture-id1283119095?b=1&k=20&m=1283119095&s=170667a&w=0&h=n4qJJJJX45J557wORBTcLBT7KleWOeUIuig-OaCVOck=);
+    background-size: auto;
+}
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.content-section .content h3 {
+    margin-top: 20px;
+    color:#5d5d5d;
+    font-size: 21px;
+}
+.content-section .content p {
+    margin-top: 10px;
+    font-family:sans-serif;
+    font-size:18px;
+    line-height: 1.5;
+}
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a{
+    background-color: #3d3d3d;
+    padding:12px 40px;
+    text-decoration: None;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px
+}
+
+.content-section .content .button a:hover {
+    background-color: #a52a2a;
+    color: #fff;
+
+}
+.content-section .social {
+    margin-top:40px;
+}
+.content-section .social i {
+    color:#a52a2a;
+    font-size: 30px;
+    padding:0px 10px;
+}
+.content-section .social i:hover {
+    color:#3d3d3d
+}
+@media screen and (max-width: 768px) {
+    .container2{
+        width: 80%;
+        display: block;
+        margin:auto;
+        padding-top:100px;
+}
+}

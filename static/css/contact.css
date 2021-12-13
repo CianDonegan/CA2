@@ -171,10 +171,10 @@ margin-top: 10px;
     .container1{
         flex-direction:column;
     }
-    .container .contactInfo{
+    .container1 .contactInfo{
         margin-bottom: 40px;
     }
-    .container .contactInfo,
+    .container1 .contactInfo,
     .contactForm{
         width: 100%;
     }
